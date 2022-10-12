@@ -4,7 +4,7 @@ from flask import Blueprint, render_template
 
 def hello_world():
     '''A simple view function'''
-    return 'Hello World, this is an extension called helloword_extension'
+    return "Hello World, this is an extension called helloword_extension"
 
 
 class HellowordExtensionPlugin(plugins.SingletonPlugin):
@@ -23,5 +23,10 @@ class HellowordExtensionPlugin(plugins.SingletonPlugin):
         blueprint = Blueprint(self.name, self.__module__)
         blueprint.template_folder = 'templates'
         # Add plugin url rules to Blueprint object
-        blueprint.add_url_rule('/hello_world', '/hello_world', hello_world)
+        blueprint.add_url_rule(
+            u'/hello_world', 
+            u'/hello_world', 
+            hello_world,
+            methods=['GET']
+        )
         return blueprint
