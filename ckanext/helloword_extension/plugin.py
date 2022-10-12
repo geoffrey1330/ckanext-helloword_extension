@@ -2,9 +2,9 @@ import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from flask import Blueprint, render_template
 
-def hello_world():
+def hello_world(name):
     '''A simple view function'''
-    return "Hello World, this is an extension called helloword_extension"
+    return "Hello World, this is an extension called {}".format(name)
 
 
 class HellowordExtensionPlugin(plugins.SingletonPlugin):
@@ -24,7 +24,7 @@ class HellowordExtensionPlugin(plugins.SingletonPlugin):
         blueprint.template_folder = 'templates'
         # Add plugin url rules to Blueprint object
         blueprint.add_url_rule(
-            u'/hello_world', 
+            u'/hello_world/<name>', 
             u'/hello_world', 
             hello_world,
             methods=['GET']
