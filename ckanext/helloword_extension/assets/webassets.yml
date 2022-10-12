@@ -1,0 +1,14 @@
+# helloword_extension-js:
+#   filter: rjsmin
+#   output: ckanext-helloword_extension/%(version)s-helloword_extension.js
+#   contents:
+#     - js/helloword_extension.js
+#   extra:
+#     preload:
+#       - base/main
+
+# helloword_extension-css:
+#   filter: cssrewrite
+#   output: ckanext-helloword_extension/%(version)s-helloword_extension.css
+#   contents:
+#     - css/helloword_extension.css
