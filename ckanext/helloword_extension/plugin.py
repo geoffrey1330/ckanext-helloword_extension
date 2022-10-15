@@ -8,6 +8,7 @@ def hello_world(name):
 
 
 class HellowordExtensionPlugin(plugins.SingletonPlugin):
+    
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IBlueprint)
     # IConfigurer
