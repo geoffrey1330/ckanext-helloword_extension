@@ -11,17 +11,17 @@ class HellowordExtensionPlugin(plugins.SingletonPlugin):
     
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IBlueprint)
-    # IConfigurer
 
+    # IConfigurer
     def update_config(self, config_):
 
         toolkit.add_template_directory(config_, 'templates')
         toolkit.add_public_directory(config_, 'public')
         toolkit.add_resource('fanstatic',
             'helloword_extension')
-    
+    #IBlueprint
     def get_blueprint(self):
-        
+
         # Create Blueprint for plugin
         blueprint = Blueprint(self.name, self.__module__)
         blueprint.template_folder = 'templates'
