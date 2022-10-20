@@ -19,6 +19,7 @@ class HellowordExtensionPlugin(plugins.SingletonPlugin):
         toolkit.add_public_directory(config_, 'public')
         toolkit.add_resource('fanstatic',
             'helloword_extension')
+            
     #IBlueprint
     def get_blueprint(self):
 
