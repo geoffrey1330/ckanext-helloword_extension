@@ -121,3 +121,4 @@ If ckanext-helloword_extension should be available on PyPI you can follow these 
 ## License
 
 [AGPL](https://www.gnu.org/licenses/agpl-3.0.en.html)
+
