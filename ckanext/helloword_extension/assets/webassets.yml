@@ -7,6 +7,7 @@
 #     preload:
 #       - base/main
 
+
 # helloword_extension-css:
 #   filter: cssrewrite
 #   output: ckanext-helloword_extension/%(version)s-helloword_extension.css
